@@ -17,23 +17,24 @@ try:
     st.text("Enter(write/paste) the text here")
     text = st.text_area(" ")
     st.text('Press cntrl+entr to submit the text')
+
+    if text:
+        logging.info("Creating objects of processor and prediction class")
+        preprocessor = Preprocessor(text)
+        final_text = preprocessor.apply_preprocessing()
     
-    logging.info("Creating objects of processor and prediction class")
-    preprocessor = Preprocessor(text)
-    final_text = preprocessor.apply_preprocessing()
-
-    prediction = Prediction(checkpoint, final_text,model_path)
-
-    logging.info("Getting the prediction result")
-    result = prediction.find_prediction()
-    label = result[0]['label']
-    score = result[0]['score']
-
-    st.subheader("Prediction:")
-   
-    st.write("Category of the news text:",label)
+        prediction = Prediction(checkpoint, final_text,model_path)
     
-    st.write('Accuracy of the prediction:',score)
+        logging.info("Getting the prediction result")
+        result = prediction.find_prediction()
+        label = result[0]['label']
+        score = result[0]['score']
+    
+        st.subheader("Prediction:")
+       
+        st.write("Category of the news text:",label)
+        
+        st.write('Accuracy of the prediction:',score)
 
     
 
