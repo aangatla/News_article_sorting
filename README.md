@@ -1,4 +1,4 @@
-# **News Article Sorting App **
+# News Article Sorting App
 This is a text classification application.It is a end to end NLP app.I have create API as well for doing prediction.</br>
 I have used 'Bert Mini' transformer and have fine tuned it.By using this app we can predict the topic of the news,we can have
 any of the topic from the given below topics:</br>
@@ -8,10 +8,10 @@ any of the topic from the given below topics:</br>
 4.Sport</br>
 5.Business</br>
 
-# **API:**</br>
+# API:</br>
 https://newsarticlesorting-xao4i0q6y2s.streamlit.app/
 
-# **Installation guide**
+# Installation guide
 
 Step1:Install the setup.py file:</br>
 pip install .
