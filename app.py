@@ -15,7 +15,7 @@ st.title("News Article Sorting App")
 try:
     logging.info("Reading the input data for prediction")
     st.text("Enter(write/paste) the text here")
-    text = st.text_area()
+    text = st.text_area(" ")
     st.text('Press cntrl+entr to submit the text')
     
     logging.info("Creating objects of processor and prediction class")
